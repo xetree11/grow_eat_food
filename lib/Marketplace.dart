@@ -11,7 +11,7 @@ class _MarketplaceState extends State<Marketplace> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text(widget.title),
+        title: new Text("Sharing Land"),
       ),
     );
   }
