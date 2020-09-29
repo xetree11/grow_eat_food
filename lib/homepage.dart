@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:groweatfood/listings.dart';
 import 'package:groweatfood/profile.dart';
 import 'package:groweatfood/Marketplace.dart';
+import 'package:groweatfood/CommunityPage.dart';
+import 'package:groweatfood/DashboardPage.dart';
+import 'package:groweatfood/SharingLandPage.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -12,15 +15,30 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _currentIndex = 0;
+  int _currentIndex = 0; //to switch screen
+  final List<Widget> _children = [
+    Dashboard(),
+    SharingLand(),
+    Community(),
+  ];
+
+  void onTappedBar(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dashboard'),
+        title: Text(
+            'HomePage'), // nishan please look this one this title need to be change according to the nav bar.
       ),
-      body: Container(), //body created by niraj
+      body: _children[_currentIndex], //body created by niraj
+
       bottomNavigationBar: BottomNavigationBar(
+        onTap: onTappedBar,
         currentIndex:
             _currentIndex, //currentIndex is for the switching the screen or index
         type: BottomNavigationBarType.fixed,
@@ -43,11 +61,12 @@ class _MyHomePageState extends State<MyHomePage> {
             //backgroundColor: Colors.blue[300]
           ),
         ],
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          }); //ontap is for switching the bottom in bottom navigationbar
-        },
+
+        // onTap: (index) {
+        //   setState(() {
+        //     _currentIndex = index;
+        //   }); //ontap is for switching the bottom in bottom navigationbar
+        // },
       ),
       drawer: new Drawer(
         child: ListView(
