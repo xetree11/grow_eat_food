@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groweatfood/listings.dart';
 import 'package:groweatfood/profile.dart';
+import 'package:groweatfood/Marketplace.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -64,6 +65,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             )));
               },
             ),
+            new ListTile(
+                title: new Text('Sharing Land'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (BuildContext context) => Marketplace(
+                                title: widget.title,
+                              )));
+                })
           ],
         ),
       ),
