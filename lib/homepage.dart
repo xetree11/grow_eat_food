@@ -12,18 +12,49 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Dashboard'),
       ),
+      body: Container(), //body created by niraj
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex:
+            _currentIndex, //currentIndex is for the switching the screen or index
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
+        items: [
+          // This is bottom navigation
+          BottomNavigationBarItem(
+            icon: Icon(Icons.dashboard),
+            title: Text('Dashboard'),
+            //backgroundColor: Colors.blue[300]
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.landscape),
+            title: Text('Sharing Land'),
+            //backgroundColor: Colors.blue[300]
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.group_work),
+            title: Text('Community'),
+            //backgroundColor: Colors.blue[300]
+          ),
+        ],
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          }); //ontap is for switching the bottom in bottom navigationbar
+        },
+      ),
       drawer: new Drawer(
         child: ListView(
           children: <Widget>[
             new UserAccountsDrawerHeader(
               accountName: new Text('Niraj'),
-              accountEmail: new Text('nirajemail@gmail.com'),
+              accountEmail: new Text('nirajlimbu@gmail.com'),
               currentAccountPicture: new CircleAvatar(
                 backgroundImage: new NetworkImage('http://i.pravatar.cc/300'),
               ),
