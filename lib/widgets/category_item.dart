@@ -36,7 +36,6 @@ class CategoryItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Text(
                     title,
@@ -46,7 +45,13 @@ class CategoryItem extends StatelessWidget {
                       color: Colors.black87,
                     ),
                   ),
-                  Icon()
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Icon(
+                    Icons.chevron_right,
+                    size: 45,
+                  ),
                 ],
               ),
             ],
@@ -54,7 +59,7 @@ class CategoryItem extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                color.withOpacity(0.7),
+                color.withOpacity(0.5),
                 color,
               ],
               begin: Alignment.topLeft,

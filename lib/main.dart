@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:groweatfood/screens/Each_Item_Screen.dart';
 import 'screens/homepage.dart';
+import 'package:groweatfood/screens/Item_List_Screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,8 +21,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/', // default is '/'
       routes: {
         '/': (ctx) => MyHomePage(),
-        /*CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
-        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),*/
+        EachItemDetailScreen.routeName: (ctx) => EachItemDetailScreen(),
+        ItemListScreen.routeName: (ctx) => ItemListScreen(),
       },
     );
   }

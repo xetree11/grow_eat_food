@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:groweatfood/item_data.dart';
+import 'package:groweatfood/widgets/each_item.dart';
 import '../item_data.dart';
 
 class ItemListScreen extends StatelessWidget {
@@ -12,8 +13,8 @@ class ItemListScreen extends StatelessWidget {
         ModalRoute.of(context).settings.arguments as Map<String, String>;
     final categoryTitle = routeArgs['title'];
     final categoryId = routeArgs['id'];
-    final categoryMeals = ITEMS_DATA.where((meal) {
-      return meal.categories.contains(categoryId);
+    final categoryItems = ITEMS_DATA.where((item) {
+      return item.categories.contains(categoryId);
     }).toList();
     return Scaffold(
       appBar: AppBar(
@@ -21,16 +22,19 @@ class ItemListScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (ctx, index) {
-          return (
-            id: categoryMeals[index].id,
-            title: categoryMeals[index].title,
-            imageUrl: categoryMeals[index].imageUrl,
-            duration: categoryMeals[index].duration,
-            affordability: categoryMeals[index].affordability,
-            complexity: categoryMeals[index].complexity,
+          return EachItem(
+            id: categoryItems[index].id,
+            title: categoryItems[index].title,
+            imageUrl: categoryItems[index].imageUrl,
+            price: categoryItems[index].price,
+            priceType: categoryItems[index].priceType,
+            // duration: categoryItems[index].duration,
+            condition: categoryItems[index].condition,
+            status: categoryItems[index].status,
+            isOrganic: categoryItems[index].isOrganic,
           );
         },
-        itemCount: categoryMeals.length,
+        itemCount: categoryItems.length,
       ),
     );
   }

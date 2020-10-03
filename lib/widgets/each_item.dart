@@ -5,7 +5,6 @@ import 'package:groweatfood/screens/Item_List_Screen.dart';
 
 class EachItem extends StatelessWidget {
   final String id;
-  final List<String> categories;
   final String title;
   final String imageUrl;
   final double price;
@@ -17,7 +16,6 @@ class EachItem extends StatelessWidget {
 
   EachItem({
     @required this.id,
-    @required this.categories,
     // may be more than one category
     @required this.title,
     @required this.imageUrl,
@@ -77,7 +75,7 @@ class EachItem extends StatelessWidget {
       onTap: () => selectItem(context),
       child: Card(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(5),
         ),
         elevation: 4,
         margin: EdgeInsets.all(10),
@@ -125,17 +123,17 @@ class EachItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.schedule,
-                      ),
-                      SizedBox(
-                        width: 6,
-                      ),
-                      Text('$duration min'),
-                    ],
-                  ),
+                  // Row(
+                  //   children: <Widget>[
+                  //     Icon(
+                  //       Icons.schedule,
+                  //     ),
+                  //     SizedBox(
+                  //       width: 6,
+                  //     ),
+                  //     Text('$duration min'),
+                  //   ],
+                  // ),
                   Row(
                     children: <Widget>[
                       Icon(
@@ -144,7 +142,7 @@ class EachItem extends StatelessWidget {
                       SizedBox(
                         width: 6,
                       ),
-                      Text(complexityText),
+                      Text(conditionText),
                     ],
                   ),
                   Row(
@@ -155,7 +153,7 @@ class EachItem extends StatelessWidget {
                       SizedBox(
                         width: 6,
                       ),
-                      Text(affordabilityText),
+                      Text(price.toString()),
                     ],
                   ),
                 ],

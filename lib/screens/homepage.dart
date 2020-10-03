@@ -75,19 +75,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundImage: new NetworkImage('http://i.pravatar.cc/300'),
               ),
             ),
-            /*new ListTile(
-              title: new Text('Dashboard'),
-              onTap: () {
-                this.reassemble();
-                */ /*Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => MyHomePage(
-                              title: widget.title,
-                            )));*/ /*
-              },
-            ),*/
             new ListTile(
               title: new Text('Profile'),
               onTap: () {
