@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'DashboardPage.dart';
+import 'Item_Categories_Screen.dart';
 import 'listings.dart';
 import 'profile.dart';
 import 'CommunityPage.dart';
@@ -17,7 +17,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0; //to switch screen
   final List<Widget> _children = [
-    Dashboard(),
+    ItemCategoriesScreen(),
     SharingLand(),
     Community(),
   ];
@@ -31,10 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-            'HomePage'), // nishan please look this one this title need to be change according to the nav bar.
-      ),
+      appBar: AppBar(title: Text('title')),
       body: _children[_currentIndex], //body created by niraj
 
       bottomNavigationBar: BottomNavigationBar(
@@ -47,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // This is bottom navigation
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
-            title: Text('Dashboard'),
+            title: Text('Marketplace'),
             //backgroundColor: Colors.blue[300]
           ),
           BottomNavigationBarItem(

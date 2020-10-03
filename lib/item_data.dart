@@ -1,6 +1,6 @@
 import './models/item.dart';
 
-const MEAL_ITEMS_DATA = const [
+const ITEMS_DATA = const [
   Item(
     id: '1',
     title: 'Apple',

@@ -1,69 +1,27 @@
 import 'package:flutter/material.dart';
 
-import 'package:groweatfood/screens/profile.dart';
-import 'package:groweatfood/screens/listings.dart';
-import 'package:groweatfood/screens/Settings.dart';
+import '../categories_data.dart';
+import 'package:groweatfood/widgets/category_item.dart';
 
-class ItemCatrgoriesScreen extends StatelessWidget {
+class ItemCategoriesScreen extends StatelessWidget {
+  static const routeName = '/item-category';
+
+  ItemCategoriesScreen({Key key, this.title}) : super(key: key);
+  final String title;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Item Categories'),
-      ),
-      drawer: new Drawer(
-        child: ListView(
-          children: <Widget>[
-            new UserAccountsDrawerHeader(
-              accountName: new Text('Niraj'),
-              accountEmail: new Text('nirajlimbu@gmail.com'),
-              currentAccountPicture: new CircleAvatar(
-                backgroundImage: new NetworkImage('http://i.pravatar.cc/300'),
-              ),
-            ),
-            new ListTile(
-              title: new Text('Profile'),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => Profile(
-                              title: 'Profile',
-                            )));
-              },
-            ),
-            new ListTile(
-              title: new Text('Listings'),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => Listings(
-                              title: 'Listings',
-                            )));
-              },
-            ),
-            new ListTile(
-                title: new Text('Settings'),
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (BuildContext context) => Settings(
-                                title: 'Settings',
-                              )));
-                })
-          ],
-        ),
-      ),
       body: ListView(
-        children: <Widget>[
-          new Card(
-            child: new ListTile(),
-          )
-        ],
+        children: ITEM_CATEGORIES
+            .map(
+              (catData) => CategoryItem(
+                catData.id,
+                catData.title,
+                catData.color,
+              ),
+            )
+            .toList(),
       ),
     );
   }
