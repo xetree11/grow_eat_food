@@ -78,19 +78,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundImage: new NetworkImage('http://i.pravatar.cc/300'),
               ),
             ),
-            new ListTile(
+            /*new ListTile(
               title: new Text('Dashboard'),
               onTap: () {
                 this.reassemble();
-                /*Navigator.of(context).pop();
+                */ /*Navigator.of(context).pop();
                 Navigator.push(
                     context,
                     new MaterialPageRoute(
                         builder: (BuildContext context) => MyHomePage(
                               title: widget.title,
-                            )));*/
+                            )));*/ /*
               },
-            ),
+            ),*/
             new ListTile(
               title: new Text('Profile'),
               onTap: () {
@@ -116,13 +116,13 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             new ListTile(
-                title: new Text('Sharing Land'),
+                title: new Text('Settings'),
                 onTap: () {
                   Navigator.push(
                       context,
                       new MaterialPageRoute(
-                          builder: (BuildContext context) => Marketplace(
-                                title: widget.title,
+                          builder: (BuildContext context) => Settings(
+                                title: 'Settings',
                               )));
                 })
           ],
