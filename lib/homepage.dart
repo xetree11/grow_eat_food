@@ -5,6 +5,7 @@ import 'package:groweatfood/Marketplace.dart';
 import 'package:groweatfood/CommunityPage.dart';
 import 'package:groweatfood/DashboardPage.dart';
 import 'package:groweatfood/SharingLandPage.dart';
+import 'package:groweatfood/Settings.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
