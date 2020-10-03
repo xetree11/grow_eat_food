@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import './homepage.dart';
+
+import 'screens/Item_Categories_Screen.dart';
+import 'screens/homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +18,13 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: 'Raleway',
       ),
-      home: MyHomePage(),
+      initialRoute: '/', // default is '/'
+      routes: {
+        '/': (ctx) => ItemCatrgoriesScreen(),
+        /*CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),*/
+      },
+      // home: MyHomePage(),
     );
   }
 }

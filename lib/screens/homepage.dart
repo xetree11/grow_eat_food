@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:groweatfood/listings.dart';
-import 'package:groweatfood/profile.dart';
-import 'package:groweatfood/Marketplace.dart';
-import 'package:groweatfood/CommunityPage.dart';
-import 'package:groweatfood/DashboardPage.dart';
-import 'package:groweatfood/SharingLandPage.dart';
-import 'package:groweatfood/Settings.dart';
+import 'DashboardPage.dart';
+import 'listings.dart';
+import 'profile.dart';
+import 'CommunityPage.dart';
+import 'SharingLandPage.dart';
+import 'Settings.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
