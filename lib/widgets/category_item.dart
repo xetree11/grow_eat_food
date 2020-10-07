@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:groweatfood/screens/Item_Scroll_Screen.dart';
 
-import 'package:groweatfood/screens/Item_Categories_Screen.dart';
-
-import '../screens/Item_Categories_Screen.dart';
-
-class CategoryItem extends StatelessWidget {
+class CategoryWidget extends StatelessWidget {
   final String id;
   final String title;
   final Color color;
 
-  CategoryItem(this.id, this.title, this.color);
+  CategoryWidget(this.id, this.title, this.color);
 
   void selectCategory(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(
-      ItemCategoriesScreen.routeName,
+      ItemScrollScreen.routeName,
       arguments: {
         'id': id,
         'title': title,

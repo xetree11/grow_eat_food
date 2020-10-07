@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:groweatfood/models/item.dart';
+import 'package:groweatfood/screens/Item_Scroll_Screen.dart';
 
-import '../models/item.dart';
-import 'package:groweatfood/screens/Item_List_Screen.dart';
-
-class EachItem extends StatelessWidget {
+class ItemTileWidget extends StatelessWidget {
   final String id;
   final String title;
   final String imageUrl;
@@ -14,7 +13,7 @@ class EachItem extends StatelessWidget {
   final Status status;
   final bool isOrganic;
 
-  EachItem({
+  ItemTileWidget({
     @required this.id,
     // may be more than one category
     @required this.title,
@@ -64,7 +63,7 @@ class EachItem extends StatelessWidget {
 
   void selectItem(BuildContext context) {
     Navigator.of(context).pushNamed(
-      ItemListScreen.routeName,
+      ItemScrollScreen.routeName,
       arguments: id,
     );
   }
@@ -123,17 +122,17 @@ class EachItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  // Row(
-                  //   children: <Widget>[
-                  //     Icon(
-                  //       Icons.schedule,
-                  //     ),
-                  //     SizedBox(
-                  //       width: 6,
-                  //     ),
-                  //     Text('$duration min'),
-                  //   ],
-                  // ),
+                  Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.schedule,
+                      ),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Text('duration'),
+                    ],
+                  ),
                   Row(
                     children: <Widget>[
                       Icon(

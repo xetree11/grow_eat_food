@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Profile extends StatefulWidget {
+  static const routeName = '/profile';
   final String title;
   Profile({this.title});
   @override
@@ -12,7 +13,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text(widget.title),
+        title: new Text('Profile'),
       ),
     );
   }

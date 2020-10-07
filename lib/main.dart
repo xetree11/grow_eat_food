@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:groweatfood/screens/Each_Item_Screen.dart';
 import 'screens/homepage.dart';
-import 'package:groweatfood/screens/Item_List_Screen.dart';
+import 'screens/Settings.dart';
+import 'screens/profile.dart';
+import 'screens/listings.dart';
+import 'screens/Item_Scroll_Screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Grow Eat Food',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blueGrey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: 'Raleway',
       ),
@@ -22,7 +25,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => MyHomePage(),
         EachItemDetailScreen.routeName: (ctx) => EachItemDetailScreen(),
-        ItemListScreen.routeName: (ctx) => ItemListScreen(),
+        ItemScrollScreen.routeName: (ctx) => ItemScrollScreen(),
+        Settings.routeName: (ctx) => Settings(),
+        Profile.routeName: (ctx) => Profile(),
+        Listings.routeName: (ctx) => Listings(),
       },
     );
   }

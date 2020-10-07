@@ -28,12 +28,15 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void onDrawrerItemTap(String rt, BuildContext ctx) {
+    Navigator.of(ctx).pushNamed(rt);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('title')),
       body: _children[_currentIndex], //body created by niraj
-
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTappedBar,
         currentIndex:
@@ -78,36 +81,19 @@ class _MyHomePageState extends State<MyHomePage> {
             new ListTile(
               title: new Text('Profile'),
               onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => Profile(
-                              title: widget.title,
-                            )));
+                onDrawrerItemTap(Profile.routeName, context);
               },
             ),
             new ListTile(
               title: new Text('Listings'),
               onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                        builder: (BuildContext context) => Listings(
-                              title: widget.title,
-                            )));
+                onDrawrerItemTap(Listings.routeName, context);
               },
             ),
             new ListTile(
                 title: new Text('Settings'),
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                          builder: (BuildContext context) => Settings(
-                                title: 'Settings',
-                              )));
+                  onDrawrerItemTap(Settings.routeName, context);
                 })
           ],
         ),

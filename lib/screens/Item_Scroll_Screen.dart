@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
-
 import 'package:groweatfood/item_data.dart';
+import 'package:groweatfood/models/item.dart';
 import 'package:groweatfood/widgets/each_item.dart';
-import '../item_data.dart';
 
-class ItemListScreen extends StatelessWidget {
-  static const routeName = '/item-list';
+class ItemScrollScreen extends StatefulWidget {
+  static const routeName = '/item-scroll-screen';
+  @override
+  _ItemScrollScreenState createState() => _ItemScrollScreenState();
+}
 
+class _ItemScrollScreenState extends State<ItemScrollScreen> {
   @override
   Widget build(BuildContext context) {
     final routeArgs =
         ModalRoute.of(context).settings.arguments as Map<String, String>;
-    final categoryTitle = routeArgs['title'];
     final categoryId = routeArgs['id'];
-    final categoryItems = ITEMS_DATA.where((item) {
+    final categoryTitle = routeArgs['title'];
+    final List<Item> categoryItems = ITEMS_DATA.where((item) {
       return item.categories.contains(categoryId);
     }).toList();
     return Scaffold(
@@ -21,10 +24,11 @@ class ItemListScreen extends StatelessWidget {
         title: Text(categoryTitle),
       ),
       body: ListView.builder(
-        itemBuilder: (ctx, index) {
-          return EachItem(
+        itemBuilder: (context, index) {
+          return ItemTileWidget(
             id: categoryItems[index].id,
             title: categoryItems[index].title,
+
             imageUrl: categoryItems[index].imageUrl,
             price: categoryItems[index].price,
             priceType: categoryItems[index].priceType,
