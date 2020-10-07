@@ -35,7 +35,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('title')),
+      appBar: AppBar(
+        title: Text('Eat Grow Food'),
+      ),
       body: _children[_currentIndex], //body created by niraj
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTappedBar,

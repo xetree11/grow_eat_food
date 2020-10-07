@@ -28,7 +28,6 @@ class _ItemScrollScreenState extends State<ItemScrollScreen> {
           return ItemTileWidget(
             id: categoryItems[index].id,
             title: categoryItems[index].title,
-
             imageUrl: categoryItems[index].imageUrl,
             price: categoryItems[index].price,
             priceType: categoryItems[index].priceType,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groweatfood/models/item.dart';
+import 'package:groweatfood/screens/Each_Item_Screen.dart';
 import 'package:groweatfood/screens/Item_Scroll_Screen.dart';
 
 class ItemTileWidget extends StatelessWidget {
@@ -63,7 +64,7 @@ class ItemTileWidget extends StatelessWidget {
 
   void selectItem(BuildContext context) {
     Navigator.of(context).pushNamed(
-      ItemScrollScreen.routeName,
+      EachItemDetailScreen.routeName,
       arguments: id,
     );
   }
@@ -74,7 +75,7 @@ class ItemTileWidget extends StatelessWidget {
       onTap: () => selectItem(context),
       child: Card(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5),
+          borderRadius: BorderRadius.circular(15),
         ),
         elevation: 4,
         margin: EdgeInsets.all(10),
@@ -125,18 +126,18 @@ class ItemTileWidget extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.schedule,
+                        Icons.attach_money,
                       ),
                       SizedBox(
                         width: 6,
                       ),
-                      Text('duration'),
+                      Text(price.toString()),
                     ],
                   ),
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.work,
+                        Icons.ac_unit,
                       ),
                       SizedBox(
                         width: 6,
@@ -147,12 +148,12 @@ class ItemTileWidget extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Icon(
-                        Icons.attach_money,
+                        Icons.work,
                       ),
                       SizedBox(
                         width: 6,
                       ),
-                      Text(price.toString()),
+                      Text(statusText),
                     ],
                   ),
                 ],

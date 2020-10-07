@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Grow Eat Food',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.green,
+        backgroundColor: Colors.lightGreen,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: 'Raleway',
       ),
