@@ -2,8 +2,8 @@ import 'package:groweatfood/models/item_category.dart';
 
 const ITEM_CATEGORIES = const [
   Category(
-    id: 'Fruit',
-    title: 'Fruit',
+    id: 'Fruits',
+    title: 'Fruits',
     imageUrl:
         'https://cdn.pixabay.com/photo/2017/05/11/19/44/fruit-2305192_1280.jpg',
   ),

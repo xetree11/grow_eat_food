@@ -42,7 +42,7 @@ class CategoryWidget extends StatelessWidget {
             top: 125,
             left: 10,
             child: Container(
-              width: 310,
+              width: 330,
               color: Colors.black54,
               padding: EdgeInsets.symmetric(
                 vertical: 5,

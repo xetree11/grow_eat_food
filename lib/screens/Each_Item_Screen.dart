@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groweatfood/item_data.dart';
 import 'package:groweatfood/models/item.dart';
+import 'package:groweatfood/widgets/Item_Detail_Column_Unit.dart';
 
 class EachItemDetailScreen extends StatelessWidget {
   static const routeName = '/each-item-detail';
@@ -11,11 +12,10 @@ class EachItemDetailScreen extends StatelessWidget {
     final Item item = ITEMS_DATA.where((item) {
       return item.id.contains(id);
     }).first;
+
     return Scaffold(
-        appBar: AppBar(
-          title: Text(item.title),
-        ),
-        body: Card(
+      body: SafeArea(
+        child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),
@@ -28,35 +28,47 @@ class EachItemDetailScreen extends StatelessWidget {
                   topLeft: Radius.circular(15),
                   topRight: Radius.circular(15),
                 ),
-                child: Image.network(
-                  item.imageUrl,
-                  height: 200,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+                child: Stack(
+                  children: <Widget>[
+                    Image.network(
+                      item.imageUrl,
+                      height: 200,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                    Positioned(
+                      top: 5,
+                      left: 5,
+                      child: Container(
+                        child: BackButton(
+                          color: Colors.white54,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(10),
                 child: Column(
                   children: <Widget>[
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Icon(
-                          Icons.attach_money,
-                          size: 23,
-                        ),
-                        Text(
-                          item.price.toString() + '  ' + item.priceType,
-                          style: TextStyle(fontSize: 20),
-                        )
-                      ],
-                    )
+                    Text(
+                      item.title,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                    ItemDetailColumnUnit(
+                        text: item.price.toString() + item.priceType,
+                        icon: Icons.attach_money),
                   ],
                 ),
               )
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
