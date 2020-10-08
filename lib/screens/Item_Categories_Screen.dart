@@ -23,7 +23,7 @@ class _ItemCategoriesScreenState extends State<ItemCategoriesScreen> {
               (catData) => CategoryWidget(
                 catData.id,
                 catData.title,
-                catData.color,
+                catData.imageUrl,
               ),
             )
             .toList(),

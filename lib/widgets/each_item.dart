@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groweatfood/models/item.dart';
 import 'package:groweatfood/screens/Each_Item_Screen.dart';
-import 'package:groweatfood/screens/Item_Scroll_Screen.dart';
 
 class ItemTileWidget extends StatelessWidget {
   final String id;
