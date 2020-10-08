@@ -11,14 +11,52 @@ class EachItemDetailScreen extends StatelessWidget {
     final Item item = ITEMS_DATA.where((item) {
       return item.id.contains(id);
     }).first;
-
     return Scaffold(
-      appBar: AppBar(
-        title: Text(item.title),
-      ),
-      body: Center(
-        child: Text(item.status.toString()),
-      ),
-    );
+        appBar: AppBar(
+          title: Text(item.title),
+        ),
+        body: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+          elevation: 4,
+          margin: EdgeInsets.all(10),
+          child: Column(
+            children: <Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
+                ),
+                child: Image.network(
+                  item.imageUrl,
+                  height: 200,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Icon(
+                          Icons.attach_money,
+                          size: 23,
+                        ),
+                        Text(
+                          item.price.toString() + '  ' + item.priceType,
+                          style: TextStyle(fontSize: 20),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }
