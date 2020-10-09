@@ -39,10 +39,8 @@ class EachItemDetailScreen extends StatelessWidget {
                     Positioned(
                       top: 5,
                       left: 5,
-                      child: Container(
-                        child: BackButton(
-                          color: Colors.white54,
-                        ),
+                      child: BackButton(
+                        color: Colors.white54,
                       ),
                     ),
                   ],
