@@ -17,6 +17,13 @@ class _ItemCategoriesScreenState extends State<ItemCategoriesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        elevation: 5,
+        onPressed: () => {},
+        child: Icon(
+          Icons.add,
+        ),
+      ),
       body: ListView(
         children: ITEM_CATEGORIES
             .map(
