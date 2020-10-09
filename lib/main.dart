@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groweatfood/screens/Add_New_Item_Screen.dart';
 import 'package:groweatfood/screens/Each_Item_Screen.dart';
 import 'screens/homepage.dart';
 import 'screens/Settings.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         Settings.routeName: (ctx) => Settings(),
         Profile.routeName: (ctx) => Profile(),
         Listings.routeName: (ctx) => Listings(),
+        AddNewItemScreen.routeName: (ctx) => AddNewItemScreen(),
       },
     );
   }
