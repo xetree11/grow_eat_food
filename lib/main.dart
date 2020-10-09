@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groweatfood/screens/Add_New_Item_Screen.dart';
 import 'package:groweatfood/screens/Each_Item_Screen.dart';
+import 'package:groweatfood/screens/Welcome/welcome_screen.dart';
 import 'screens/homepage.dart';
 import 'screens/Settings.dart';
 import 'screens/profile.dart';
