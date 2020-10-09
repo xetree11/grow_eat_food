@@ -37,7 +37,7 @@ class _ItemScrollScreenState extends State<ItemScrollScreen> {
             isOrganic: categoryItems[index].isOrganic,
           );
         },
-        itemCount: categoryItems.length,
+        itemExtent: categoryItems.length.roundToDouble(),
       ),
     );
   }
