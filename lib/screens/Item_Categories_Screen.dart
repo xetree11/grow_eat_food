@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groweatfood/screens/Add_New_Item_Screen.dart';
 
 import '../categories_data.dart';
 import 'package:groweatfood/widgets/category_item.dart';
@@ -19,7 +20,8 @@ class _ItemCategoriesScreenState extends State<ItemCategoriesScreen> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         elevation: 5,
-        onPressed: () => {},
+        onPressed: () =>
+            {Navigator.of(context).pushNamed(AddNewItemScreen.routeName)},
         child: Icon(
           Icons.add,
         ),

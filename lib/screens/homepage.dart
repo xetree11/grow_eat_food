@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // This is bottom navigation
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
-            title: Text('Marketplace'),
+            title: Text('Home'),
             //backgroundColor: Colors.blue[300]
           ),
           BottomNavigationBarItem(
