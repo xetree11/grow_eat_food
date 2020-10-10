@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../components/already_have_an_account_acheck.dart';
-import '../../../components/rounded_button.dart';
-import '../../../components/rounded_input_field.dart';
-import '../../../components/rounded_password_field.dart';
-import '../../Signup/components/background.dart';
-import '../../Signup/signup_screen.dart';
 import 'package:groweatfood/components/already_have_an_account_acheck.dart';
 import 'package:groweatfood/components/rounded_button.dart';
 import 'package:groweatfood/components/rounded_input_field.dart';
