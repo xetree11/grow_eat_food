@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-<<<<<<< Updated upstream
-
-import 'package:flutter_svg/svg.dart';
-=======
-<<<<<<< HEAD
 import 'package:flutter_svg/svg.dart';
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../components/rounded_button.dart';
@@ -11,21 +6,12 @@ import '../../../components/rounded_input_field.dart';
 import '../../../components/rounded_password_field.dart';
 import '../../Signup/components/background.dart';
 import '../../Signup/signup_screen.dart';
-=======
-
-import 'package:flutter_svg/svg.dart';
->>>>>>> Stashed changes
 import 'package:groweatfood/components/already_have_an_account_acheck.dart';
 import 'package:groweatfood/components/rounded_button.dart';
 import 'package:groweatfood/components/rounded_input_field.dart';
 import 'package:groweatfood/components/rounded_password_field.dart';
 import 'package:groweatfood/screens/Signup/signup_screen.dart';
-
-import 'background.dart';
-<<<<<<< Updated upstream
-=======
->>>>>>> 9d27ae8a14904c0ec737599c53e63be149e9d1c7
->>>>>>> Stashed changes
+import 'package:groweatfood/screens/Login/components/background.dart';
 
 class Body extends StatelessWidget {
   const Body({
