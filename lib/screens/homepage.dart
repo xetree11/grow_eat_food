@@ -7,8 +7,7 @@ import 'SharingLandPage.dart';
 import 'Settings.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
+  static const routeName = '/home-page';
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -50,25 +49,16 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
             title: Text('Home'),
-            //backgroundColor: Colors.blue[300]
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.landscape),
             title: Text('Sharing Land'),
-            //backgroundColor: Colors.blue[300]
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.group_work),
             title: Text('Community'),
-            //backgroundColor: Colors.blue[300]
           ),
         ],
-
-        // onTap: (index) {
-        //   setState(() {
-        //     _currentIndex = index;
-        //   }); //ontap is for switching the bottom in bottom navigationbar
-        // },
       ),
       drawer: new Drawer(
         child: ListView(

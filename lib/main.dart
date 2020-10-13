@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:groweatfood/screens/Add_New_Item_Screen.dart';
 import 'package:groweatfood/screens/Each_Item_Screen.dart';
 import 'package:groweatfood/screens/Welcome/welcome_screen.dart';
+import 'package:groweatfood/screens/homepage.dart';
 import 'screens/Welcome/welcome_screen.dart';
 import 'screens/Settings.dart';
 import 'screens/profile.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/', // default is '/'
       routes: {
         '/': (ctx) => WelcomeScreen(),
+        MyHomePage.routeName: (ctx) => MyHomePage(),
         EachItemDetailScreen.routeName: (ctx) => EachItemDetailScreen(),
         ItemScrollScreen.routeName: (ctx) => ItemScrollScreen(),
         Settings.routeName: (ctx) => Settings(),
