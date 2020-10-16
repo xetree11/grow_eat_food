@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "376788979005",
+    "firebase_url": "https://grow-eat-food-c65ad.firebaseio.com",
+    "project_id": "grow-eat-food-c65ad",
+    "storage_bucket": "grow-eat-food-c65ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376788979005:android:c3376291e662e55dc60954",
+        "android_client_info": {
+          "package_name": "com.groweatfood.groweatfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376788979005-vfk951un1rhcsjt7qn9plthrqkd9qeor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEJICx8e8neQPZOXXzS8sfW6nylpSVIlg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376788979005-vfk951un1rhcsjt7qn9plthrqkd9qeor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

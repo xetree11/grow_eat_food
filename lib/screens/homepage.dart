@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groweatfood/widgets/floatingActionButton.dart';
 import 'Item_Categories_Screen.dart';
 import 'listings.dart';
 import 'profile.dart';
@@ -7,8 +8,7 @@ import 'SharingLandPage.dart';
 import 'Settings.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
+  static const routeName = '/home-page';
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -35,40 +35,41 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: MyFloatingActionButton(),
       appBar: AppBar(
+        elevation: 10,
         title: Text('Eat Grow Food'),
       ),
       body: _children[_currentIndex], //body created by niraj
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 10,
         onTap: onTappedBar,
         currentIndex:
             _currentIndex, //currentIndex is for the switching the screen or index
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.grey,
+        backgroundColor: Colors.white70,
         items: [
           // This is bottom navigation
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
+            // ignore: deprecated_member_use
             title: Text('Home'),
-            //backgroundColor: Colors.blue[300]
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.landscape),
+            // ignore: deprecated_member_use
             title: Text('Sharing Land'),
-            //backgroundColor: Colors.blue[300]
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.group_work),
+            icon: Icon(
+              Icons.group_work,
+            ),
+            // ignore: deprecated_member_use
             title: Text('Community'),
-            //backgroundColor: Colors.blue[300]
           ),
         ],
-
-        // onTap: (index) {
-        //   setState(() {
-        //     _currentIndex = index;
-        //   }); //ontap is for switching the bottom in bottom navigationbar
-        // },
       ),
       drawer: new Drawer(
         child: ListView(
@@ -77,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
               accountName: new Text('Niraj'),
               accountEmail: new Text('nirajlimbu@gmail.com'),
               currentAccountPicture: new CircleAvatar(
-                backgroundImage: new NetworkImage('http://i.pravatar.cc/300'),
+                backgroundImage: new NetworkImage('https://i.pravatar.cc/300'),
               ),
             ),
             new ListTile(

@@ -6,6 +6,7 @@ import 'package:groweatfood/components/rounded_input_field.dart';
 import 'package:groweatfood/components/rounded_password_field.dart';
 import 'package:groweatfood/screens/Signup/signup_screen.dart';
 import 'package:groweatfood/screens/Login/components/background.dart';
+import 'package:groweatfood/screens/homepage.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -39,7 +40,9 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              press: () {
+                Navigator.of(context).pushNamed(MyHomePage.routeName);
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
