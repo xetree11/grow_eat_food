@@ -20,14 +20,6 @@ class _ItemCategoriesScreenState extends State<ItemCategoriesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        elevation: 5,
-        onPressed: () =>
-            {Navigator.of(context).pushNamed(AddProductScreen.routeName)},
-        child: Icon(
-          Icons.add,
-        ),
-      ),
       body: ListView(
         children: ITEM_CATEGORIES
             .map(

@@ -34,8 +34,7 @@ class MyApp extends StatelessWidget {
         Settings.routeName: (ctx) => Settings(),
         Profile.routeName: (ctx) => Profile(),
         Listings.routeName: (ctx) => Listings(),
-        //AddNewItemScreen.routeName: (ctx) => AddNewItemScreen(),
-        AddProductScreen.routeName: (ctx) => AddProductScreen(),
+        AddNewItemScreen.routeName: (ctx) => AddNewItemScreen(),
       },
     );
   }
