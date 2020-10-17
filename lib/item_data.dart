@@ -9,7 +9,7 @@ const ITEMS_DATA = const [
     priceType: 'per kg',
     // harvestDate: DateTime.parse('2012-02-27 13:27:00'),
     condition: Condition.Fresh,
-    status: Status.Available,
+    status: Status.Sold,
     isOrganic: true,
     location: null,
     imageUrl:
@@ -66,7 +66,7 @@ const ITEMS_DATA = const [
     // harvestDate: DateTime.parse('2012-02-27 13:27:00'),
     condition: Condition.Fresh,
     status: Status.Available,
-    isOrganic: true,
+    isOrganic: false,
     location: null,
     imageUrl:
         'https://cdn.pixabay.com/photo/2019/12/11/16/20/parsley-4688651_1280.jpg',
