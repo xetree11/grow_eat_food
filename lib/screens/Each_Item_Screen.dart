@@ -139,7 +139,19 @@ class EachItemDetailScreen extends StatelessWidget {
                         color: getOrganicTextColor(item.isOrganic),
                         text: getOrganicText(item.isOrganic),
                         icon: Icons.grass,
-                      )
+                      ),
+                      ItemDetailColumnUnit(
+                        color: getOrganicTextColor(item.isOrganic),
+                        text:
+                            "aassssddd\naasddsaaddddd\nkskskskskkskskskksaksks\nskasjakSJKAsjka\NJADHahdiad\nadjaAU",
+                        icon: Icons.grass,
+                      ),
+                      ItemDetailColumnUnit(
+                        color: getOrganicTextColor(item.isOrganic),
+                        text:
+                            "aassssddd\naasddsaaddddd\nkskskskskkskskskksaksks\nskasjakSJKAsjka\NJADHahdiad\nadjaAU",
+                        icon: Icons.grass,
+                      ),
                     ],
                   ),
                 )
