@@ -10,12 +10,12 @@ class MyFloatingActionButton extends StatelessWidget {
       onPressed: () {
         showModalBottomSheet(
             context: context,
-            builder: (context) {
+            builder: (ctx) {
               return Container(
                 color: Color(0xFF737373),
                 height: 180,
                 child: Container(
-                  child: _buildBottomNavigationMenu(context),
+                  child: _buildBottomNavigationMenu(ctx),
                   decoration: BoxDecoration(
                     color: Theme.of(context).canvasColor,
                     borderRadius: BorderRadius.only(

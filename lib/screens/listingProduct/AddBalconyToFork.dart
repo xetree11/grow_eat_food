@@ -41,6 +41,7 @@ class _AddBalconyToForkState extends State<AddBalconyToFork> {
                 Padding(
                   padding: const EdgeInsets.all(10),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       TextField(
                         decoration: InputDecoration(labelText: 'Title'),
@@ -75,14 +76,14 @@ class _AddBalconyToForkState extends State<AddBalconyToFork> {
                         // onChanged: (val) => amountInput = val,
                       ),
                       SizedBox(
-                        height: 15,
+                        height: 25,
                       ),
                       RaisedButton(
                         padding: EdgeInsets.all(10),
                         child: Text(
                           'Submit',
                           style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 20,
                           ),
                         ),
                         textColor: Colors.white,
