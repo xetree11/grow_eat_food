@@ -36,43 +36,61 @@ class _AddBalconyToForkState extends State<AddBalconyToFork> {
                   ),
                 ),
                 Text(
-                    'Photos: 0/10 Choose your listings main photo first. Add more photos with multiple angles to show any damage or wear'),
-                TextField(
-                  decoration: InputDecoration(labelText: 'Title'),
-
-                  // onChanged: (val) {
-                  //   titleInput = val;
-                  // },
+                  'Photos: 0/10 Choose your listings main photo first. Add more photos with multiple angles to show any damage or wear',
                 ),
-                TextField(
-                  decoration: InputDecoration(labelText: 'Category'),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    children: [
+                      TextField(
+                        decoration: InputDecoration(labelText: 'Title'),
 
-                  // onChanged: (val) => amountInput = val,
-                ),
-                TextField(
-                  decoration: InputDecoration(labelText: 'Condition'),
+                        // onChanged: (val) {
+                        //   titleInput = val;
+                        // },
+                      ),
+                      TextField(
+                        decoration: InputDecoration(labelText: 'Category'),
 
-                  // onChanged: (val) => amountInput = val,
-                ),
-                TextField(
-                  decoration: InputDecoration(labelText: 'Price'),
+                        // onChanged: (val) => amountInput = val,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(labelText: 'Condition'),
 
-                  // onChanged: (val) => amountInput = val,
-                ),
-                TextField(
-                  decoration: InputDecoration(labelText: 'Location'),
+                        // onChanged: (val) => amountInput = val,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(labelText: 'Price'),
 
-                  // onChanged: (val) => amountInput = val,
-                ),
-                TextField(
-                  decoration: InputDecoration(labelText: 'Description'),
+                        // onChanged: (val) => amountInput = val,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(labelText: 'Location'),
 
-                  // onChanged: (val) => amountInput = val,
-                ),
-                FlatButton(
-                  child: Text('Submit'),
-                  textColor: Colors.green,
-                  onPressed: () {},
+                        // onChanged: (val) => amountInput = val,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(labelText: 'Description'),
+
+                        // onChanged: (val) => amountInput = val,
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      RaisedButton(
+                        padding: EdgeInsets.all(10),
+                        child: Text(
+                          'Submit',
+                          style: TextStyle(
+                            fontSize: 30,
+                          ),
+                        ),
+                        textColor: Colors.white,
+                        color: Theme.of(context).primaryColor,
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
