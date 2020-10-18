@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groweatfood/screens/listingProduct/AddBalconyToFork.dart';
+import 'package:groweatfood/screens/listingProduct/AddCommunity.dart';
+import 'package:groweatfood/screens/listingProduct/AddSharingLand.dart';
 
 class MyFloatingActionButton extends StatelessWidget {
   @override
@@ -39,18 +41,23 @@ class MyFloatingActionButton extends StatelessWidget {
         ListTile(
           leading: Icon(Icons.landscape),
           title: Text('List On SharingLand'),
-          onTap: () {},
+          onTap: () {
+            Navigator.of(ctx).pushNamed(AddSharingLand.routeName);
+          },
         ),
         ListTile(
           leading: Icon(Icons.group_work),
           title: Text('List On Community'),
-          onTap: () {},
+          onTap: () => {
+            Navigator.of(ctx).pushNamed(AddCommunity.routeName),
+          },
         ),
         ListTile(
           leading: Icon(Icons.business),
           title: Text('Balcony To Fork'),
-          onTap: () =>
-              {Navigator.of(ctx).pushNamed(AddBalconyToFork.routeName)},
+          onTap: () => {
+            Navigator.of(ctx).pushNamed(AddBalconyToFork.routeName),
+          },
         ),
       ],
     );

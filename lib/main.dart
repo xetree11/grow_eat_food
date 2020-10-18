@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groweatfood/screens/listingProduct/AddBalconyToFork.dart';
+import 'package:groweatfood/screens/listingProduct/AddCommunity.dart';
+import 'package:groweatfood/screens/listingProduct/AddSharingLand.dart';
 import 'package:groweatfood/screens/listingProduct/Add_New_Item_Screen.dart';
 import 'package:groweatfood/screens/Each_Item_Screen.dart';
 import 'package:groweatfood/screens/Welcome/welcome_screen.dart';
@@ -37,6 +39,8 @@ class MyApp extends StatelessWidget {
         Listings.routeName: (ctx) => Listings(),
         AddNewItemScreen.routeName: (ctx) => AddNewItemScreen(),
         AddBalconyToFork.routeName: (ctx) => AddBalconyToFork(),
+        AddCommunity.routeName: (ctx) => AddCommunity(),
+        AddSharingLand.routeName: (ctx) => AddSharingLand(),
       },
     );
   }
