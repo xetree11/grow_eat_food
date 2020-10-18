@@ -21,6 +21,33 @@ class _AddBalconyToForkState extends State<AddBalconyToFork> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
+              Container(
+                  child: Container(
+                child: Column(
+                  children: [
+                    Container(
+                      // decoration:
+                      //     BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              width: 500,
+                              height: 200,
+                              color: Colors.black12,
+                              child: Icon(Icons.add),
+                            ),
+                          ),
+                          Text(
+                              'Photos: 0/10 Choose your listings main photo first. Add more photos with multiple angles to show any damage or wear'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )),
               TextField(
                 decoration: InputDecoration(labelText: 'Title'),
 
@@ -29,7 +56,27 @@ class _AddBalconyToForkState extends State<AddBalconyToFork> {
                 // },
               ),
               TextField(
+                decoration: InputDecoration(labelText: 'Category'),
+
+                // onChanged: (val) => amountInput = val,
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: 'Condition'),
+
+                // onChanged: (val) => amountInput = val,
+              ),
+              TextField(
                 decoration: InputDecoration(labelText: 'Price'),
+
+                // onChanged: (val) => amountInput = val,
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: 'Location'),
+
+                // onChanged: (val) => amountInput = val,
+              ),
+              TextField(
+                decoration: InputDecoration(labelText: 'Description'),
 
                 // onChanged: (val) => amountInput = val,
               ),
