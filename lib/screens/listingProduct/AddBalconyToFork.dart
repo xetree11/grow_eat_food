@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AddBalconyToFork extends StatefulWidget {
   static const routeName = '/add-Balcony-To-Fork';
@@ -8,6 +11,16 @@ class AddBalconyToFork extends StatefulWidget {
 }
 
 class _AddBalconyToForkState extends State<AddBalconyToFork> {
+  File _image;
+
+  _getImage() async {
+    File image = await ImagePicker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      _image = image;
+      print('_image: $_image');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,12 +40,13 @@ class _AddBalconyToForkState extends State<AddBalconyToFork> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {},
+                  onTap: _getImage,
                   child: Container(
                     width: 500,
                     height: 200,
                     color: Colors.black12,
-                    child: Icon(Icons.add),
+                    child:
+                        _image == null ? Icon(Icons.add) : Image.file(_image),
                   ),
                 ),
                 Text(
