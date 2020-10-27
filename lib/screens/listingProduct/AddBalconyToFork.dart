@@ -45,8 +45,10 @@ class _AddBalconyToForkState extends State<AddBalconyToFork> {
                     width: 500,
                     height: 200,
                     color: Colors.black12,
-                    child:
-                        _image == null ? Icon(Icons.add) : Image.file(_image),
+                    child: Text(
+                      "qq",
+                    ),
+                    // _image == null ? Icon(Icons.add) : Image.file(_image),
                   ),
                 ),
                 Text(

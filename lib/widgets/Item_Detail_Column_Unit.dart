@@ -9,7 +9,8 @@ class ItemDetailColumnUnit extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.8,
       padding: const EdgeInsets.all(10),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -20,12 +21,15 @@ class ItemDetailColumnUnit extends StatelessWidget {
           SizedBox(
             width: 15,
           ),
-          Text(
-            text,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: color,
+          Flexible(
+            child: Text(
+              text,
+              textWidthBasis: TextWidthBasis.longestLine,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: color,
+              ),
             ),
           ),
         ],

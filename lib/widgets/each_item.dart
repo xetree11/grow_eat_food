@@ -12,6 +12,7 @@ class ItemTileWidget extends StatelessWidget {
   final Condition condition;
   final Status status;
   final bool isOrganic;
+  // BuildContext ctx;
 
   ItemTileWidget({
     @required this.id,
@@ -27,6 +28,7 @@ class ItemTileWidget extends StatelessWidget {
     @required this.status,
     // sold/pending/available
     @required this.isOrganic,
+    // @required this.ctx,
   });
 
   String get conditionText {
@@ -61,17 +63,17 @@ class ItemTileWidget extends StatelessWidget {
     }
   }
 
-  void selectItem(BuildContext context) {
-    Navigator.of(context).pushNamed(
-      EachItemDetailScreen.routeName,
-      arguments: id,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => selectItem(context),
+      onTap: () => showModalBottomSheet(
+          context: context,
+          isScrollControlled: false,
+          enableDrag: true,
+          backgroundColor: Colors.transparent,
+          builder: (context) {
+            return EachItemDetailScreen(id);
+          }),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
@@ -110,8 +112,6 @@ class ItemTileWidget extends StatelessWidget {
                         fontSize: 26,
                         color: Colors.white,
                       ),
-                      softWrap: true,
-                      overflow: TextOverflow.fade,
                     ),
                   ),
                 )
