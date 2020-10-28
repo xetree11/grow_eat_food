@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "376788979005",
-    "firebase_url": "https://grow-eat-food-c65ad.firebaseio.com",
-    "project_id": "grow-eat-food-c65ad",
-    "storage_bucket": "grow-eat-food-c65ad.appspot.com"
+    "project_number": "635718877817",
+    "firebase_url": "https://groweatfood-182ff.firebaseio.com",
+    "project_id": "groweatfood-182ff",
+    "storage_bucket": "groweatfood-182ff.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:376788979005:android:c3376291e662e55dc60954",
+        "mobilesdk_app_id": "1:635718877817:android:7df116d4d30468e9874aa8",
         "android_client_info": {
           "package_name": "com.groweatfood.groweatfood"
         }
       },
       "oauth_client": [
         {
-          "client_id": "376788979005-vfk951un1rhcsjt7qn9plthrqkd9qeor.apps.googleusercontent.com",
+          "client_id": "635718877817-432ok9ne9mbrg5gr1eq57eru5i6gs1rl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAEJICx8e8neQPZOXXzS8sfW6nylpSVIlg"
+          "current_key": "AIzaSyA5_Z7QWPjc0EsF3V6zni9sYfqp46RqKOc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "376788979005-vfk951un1rhcsjt7qn9plthrqkd9qeor.apps.googleusercontent.com",
+              "client_id": "635718877817-432ok9ne9mbrg5gr1eq57eru5i6gs1rl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
