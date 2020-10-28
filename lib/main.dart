@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groweatfood/screens/Community_Item_Scroll_Page.dart';
 import 'package:groweatfood/screens/listingProduct/AddBalconyToFork.dart';
 import 'package:groweatfood/screens/listingProduct/AddCommunity.dart';
 import 'package:groweatfood/screens/listingProduct/AddSharingLand.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         AddBalconyToFork.routeName: (ctx) => AddBalconyToFork(),
         AddCommunity.routeName: (ctx) => AddCommunity(),
         AddSharingLand.routeName: (ctx) => AddSharingLand(),
+        CommunityItemScrollPage.routeName: (ctx) => CommunityItemScrollPage(),
         successScreen_.routeName: (ctx) => successScreen_(),
       },
     );

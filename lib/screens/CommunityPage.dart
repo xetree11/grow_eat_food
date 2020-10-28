@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:groweatfood/widgets/Community_Category_Widget.dart';
-import 'package:groweatfood/widgets/category_item.dart';
-
-import '../categories_data.dart';
 
 class Community extends StatefulWidget {
   @override
