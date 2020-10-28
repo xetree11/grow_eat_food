@@ -123,6 +123,47 @@ class EachItemDetailScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.share),
+                              Text(
+                                ' Share',
+                                style: TextStyle(
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Icon(Icons.favorite_outlined),
+                              Text(
+                                ' Flag',
+                                style: TextStyle(
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Icon(Icons.report),
+                              Text(
+                                ' Report',
+                                style: TextStyle(
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
                     ItemDetailColumnUnit(
                         color: Colors.black38,
                         text: item.price.toString() + item.priceType,
@@ -139,18 +180,6 @@ class EachItemDetailScreen extends StatelessWidget {
                     ItemDetailColumnUnit(
                       color: getOrganicTextColor(item.isOrganic),
                       text: getOrganicText(item.isOrganic),
-                      icon: Icons.grass,
-                    ),
-                    ItemDetailColumnUnit(
-                      color: getOrganicTextColor(item.isOrganic),
-                      text:
-                          "aassssddd\naasddsaaddddd\nkskskskskkskskskksaksks\nskasjakSJKAsjka\NJADHahdiad\nadjaAU",
-                      icon: Icons.grass,
-                    ),
-                    ItemDetailColumnUnit(
-                      color: getOrganicTextColor(item.isOrganic),
-                      text:
-                          "aassssddd\naasddsaaddddd\nkskskskskkskskskksaksks\nskasjakSJKAsjka\NJADHahdiad\nadjaAU",
                       icon: Icons.grass,
                     ),
                   ],

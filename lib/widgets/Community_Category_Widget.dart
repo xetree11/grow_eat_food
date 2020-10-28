@@ -15,7 +15,8 @@ class CommunityCategoryWidget extends StatefulWidget {
 
 class _CommunityCategoryWidgetState extends State<CommunityCategoryWidget> {
   @override
-  String groupJoin = "Join Group";
+  String groupJoin = "Follow";
+  Color color = Colors.blue;
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
@@ -49,7 +50,8 @@ class _CommunityCategoryWidgetState extends State<CommunityCategoryWidget> {
             GestureDetector(
               onTap: () {
                 setState(() {
-                  groupJoin = "Joined";
+                  groupJoin = "Unfollow";
+                  color = Colors.red;
                 });
               },
               child: Container(
@@ -57,8 +59,16 @@ class _CommunityCategoryWidgetState extends State<CommunityCategoryWidget> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.add),
-                    Text(groupJoin),
+                    Icon(
+                      Icons.add,
+                      color: color,
+                    ),
+                    Text(
+                      groupJoin,
+                      style: TextStyle(
+                        color: color,
+                      ),
+                    ),
                   ],
                 ),
               ),
