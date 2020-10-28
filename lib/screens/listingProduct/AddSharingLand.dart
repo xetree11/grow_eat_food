@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:groweatfood/screens/listingProduct/success.dart';
 import 'package:image_picker/image_picker.dart';
 
 class AddSharingLand extends StatefulWidget {
@@ -100,7 +101,10 @@ class _AddSharingLandState extends State<AddSharingLand> {
                         ),
                         textColor: Colors.white,
                         color: Theme.of(context).primaryColor,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(successScreen_.routeName);
+                        },
                       ),
                     ],
                   ),

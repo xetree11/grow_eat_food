@@ -5,6 +5,7 @@ import 'package:groweatfood/screens/listingProduct/AddSharingLand.dart';
 import 'package:groweatfood/screens/listingProduct/Add_New_Item_Screen.dart';
 import 'package:groweatfood/screens/Welcome/welcome_screen.dart';
 import 'package:groweatfood/screens/homepage.dart';
+import 'package:groweatfood/screens/listingProduct/success.dart';
 import 'screens/Welcome/welcome_screen.dart';
 import 'screens/Settings.dart';
 import 'screens/profile.dart';
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         AddBalconyToFork.routeName: (ctx) => AddBalconyToFork(),
         AddCommunity.routeName: (ctx) => AddCommunity(),
         AddSharingLand.routeName: (ctx) => AddSharingLand(),
+        successScreen_.routeName: (ctx) => successScreen_(),
       },
     );
   }
