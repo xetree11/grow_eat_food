@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groweatfood/screens/maps/map.dart';
 import 'package:groweatfood/widgets/floatingActionButton.dart';
 import 'Item_Categories_Screen.dart';
 import 'listings.dart';
@@ -19,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _children = [
     ItemCategoriesScreen(),
     Community(),
-    SharingLand(),
+    Home(),
   ];
 
   void onTappedBar(int index) {

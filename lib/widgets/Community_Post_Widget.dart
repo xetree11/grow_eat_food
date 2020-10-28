@@ -43,7 +43,7 @@ class _CommunityPostWidgetState extends State<CommunityPostWidget> {
                 Text(
                   this.groupName,
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 17,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
