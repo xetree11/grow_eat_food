@@ -18,8 +18,8 @@ class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0; //to switch screen
   final List<Widget> _children = [
     ItemCategoriesScreen(),
-    SharingLand(),
     Community(),
+    SharingLand(),
   ];
 
   void onTappedBar(int index) {
@@ -53,21 +53,21 @@ class _MyHomePageState extends State<MyHomePage> {
         items: [
           // This is bottom navigation
           BottomNavigationBarItem(
-            icon: Icon(Icons.dashboard),
-            // ignore: deprecated_member_use
-            title: Text('Home'),
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.landscape),
             // ignore: deprecated_member_use
             title: Text('Sharing Land'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.group_work,
-            ),
+            icon: Icon(Icons.group_work),
             // ignore: deprecated_member_use
             title: Text('Community'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.map_sharp,
+            ),
+            // ignore: deprecated_member_use
+            title: Text('Map'),
           ),
         ],
       ),

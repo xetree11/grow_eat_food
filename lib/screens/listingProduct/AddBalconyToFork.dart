@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:groweatfood/screens/listingProduct/success.dart';
+import 'package:groweatfood/models/item.dart';
 import 'package:image_picker/image_picker.dart';
 
 class AddBalconyToFork extends StatefulWidget {
-  static const routeName = '/add-Balcony-To-Fork';
+  static const routeName = 'add-Balcony-To-Fork';
   AddBalconyToFork({Key key}) : super(key: key);
   @override
   _AddBalconyToForkState createState() => _AddBalconyToForkState();
@@ -13,6 +13,7 @@ class AddBalconyToFork extends StatefulWidget {
 
 class _AddBalconyToForkState extends State<AddBalconyToFork> {
   File _image;
+  Item item = new Item();
 
   _getImage() async {
     File image = await ImagePicker.pickImage(source: ImageSource.gallery);
@@ -62,9 +63,8 @@ class _AddBalconyToForkState extends State<AddBalconyToFork> {
                     children: [
                       TextField(
                         decoration: InputDecoration(labelText: 'Title'),
-
                         // onChanged: (val) {
-                        //   titleInput = val;
+                        //   item.title = val;
                         // },
                       ),
                       TextField(
@@ -105,10 +105,7 @@ class _AddBalconyToForkState extends State<AddBalconyToFork> {
                         ),
                         textColor: Colors.white,
                         color: Theme.of(context).primaryColor,
-                        onPressed: () {
-                          Navigator.of(context)
-                              .pushNamed(successScreen_.routeName);
-                        },
+                        onPressed: () {},
                       ),
                     ],
                   ),

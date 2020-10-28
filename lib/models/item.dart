@@ -26,20 +26,20 @@ class Item {
   final Map location;
 
   const Item({
-    @required this.id,
-    @required this.categories,
+    this.id,
+    this.categories,
     // may be more than one category
-    @required this.title,
-    @required this.imageUrl,
-    @required this.price,
-    @required this.priceType,
+    this.title,
+    this.imageUrl,
+    this.price,
+    this.priceType,
     // eg.per kg/per 12/per 100
     // @required this.harvestDate,
-    @required this.condition,
+    this.condition,
     // fresh/frozen/should go immediately
-    @required this.status,
+    this.status,
     // sold/pending/available
-    @required this.location,
-    @required this.isOrganic,
+    this.location,
+    this.isOrganic,
   });
 }
