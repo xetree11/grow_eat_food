@@ -14,19 +14,19 @@ class _CommunityState extends State<Community> {
         children: [
           CommunityCategoryWidget(
             text: "United Farm Group",
-            color: Colors.blue,
+            color: Colors.yellowAccent,
           ),
           CommunityCategoryWidget(
             text: "Auburn Growers",
-            color: Colors.redAccent,
+            color: Colors.white60,
           ),
           CommunityCategoryWidget(
             text: "The Gardeners",
-            color: Colors.grey,
+            color: Colors.yellowAccent,
           ),
           CommunityCategoryWidget(
             text: "Only Apple",
-            color: Colors.green,
+            color: Colors.white60,
           )
         ],
       ),
