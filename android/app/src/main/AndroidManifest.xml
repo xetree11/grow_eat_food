@@ -45,5 +45,13 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+<<<<<<< HEAD
+=======
+            <uses-permission android:name="android.permission.INTERNET"/>      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <application ></application>
+             <meta-data android:name="com.google.android.geo.AIzaSyCOwwZ7xsX4ulNMdKX6ayv_xLSYkCv_R34"
+             android:value="AIzaSyCOwwZ7xsX4ulNMdKX6ayv_xLSYkCv_R34"/>
+
+>>>>>>> 72b9059fb859bb2337a6a1795b43f56ae84912fd
     </application>
 </manifest>

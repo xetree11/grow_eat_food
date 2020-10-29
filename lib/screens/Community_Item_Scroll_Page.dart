@@ -23,10 +23,12 @@ class _CommunityItemScrollPageState extends State<CommunityItemScrollPage> {
         padding: EdgeInsets.all(15),
         child: ListView(
           children: [
-            CommunityPostWidget('Nishan Adhikari', groupName, 'Dummy Post'),
-            CommunityPostWidget('Sunil Kunwar', groupName, 'Dummy Post'),
-            CommunityPostWidget('Sumi Tamang', groupName, 'Dummy Post'),
-            CommunityPostWidget('Milan Malla', groupName, 'Dummy Post'),
+            CommunityPostWidget(
+                'Nishan Adhikari', groupName, 'Hi, check my apple out.'),
+            CommunityPostWidget(
+                'Sunil Kunwar', groupName, 'Apple is a delicious fruit.'),
+            CommunityPostWidget('Sumi Tamang', groupName, 'Hey there. banana.'),
+            CommunityPostWidget('Milan Malla', groupName, 'Mango is Love'),
             CommunityPostWidget('Niraj Chemjong', groupName, 'Dummy Post'),
             CommunityPostWidget('Bikram Khadka', groupName, 'Dummy Post'),
             CommunityPostWidget('Ujwal Khatiwada', groupName, 'Dummy Post'),
