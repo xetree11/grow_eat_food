@@ -55,9 +55,7 @@ class _CommunityPostWidgetState extends State<CommunityPostWidget> {
             padding: const EdgeInsets.all(20),
             child: Text(
               this.text,
-              style: TextStyle(
-                fontSize: 17,
-              ),
+              style: TextStyle(),
             ),
           ),
           Padding(
@@ -78,35 +76,20 @@ class _CommunityPostWidgetState extends State<CommunityPostWidget> {
                         Icons.thumb_up,
                         color: color,
                       ),
-                      Text(
-                        like,
-                        style: TextStyle(
-                          fontSize: 17,
-                        ),
-                      ),
+                      Text(like),
                     ],
                   ),
                 ),
                 Row(
                   children: [
                     Icon(Icons.comment),
-                    Text(
-                      ' Comment',
-                      style: TextStyle(
-                        fontSize: 17,
-                      ),
-                    ),
+                    Text(' Comment'),
                   ],
                 ),
                 Row(
                   children: [
                     Icon(Icons.share_outlined),
-                    Text(
-                      ' Share',
-                      style: TextStyle(
-                        fontSize: 17,
-                      ),
-                    ),
+                    Text(' Share'),
                   ],
                 ),
               ],
