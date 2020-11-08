@@ -20,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _children = [
     ItemCategoriesScreen(),
     Community(),
-    Home(),
+    //Home(),
   ];
 
   void onTappedBar(int index) {
